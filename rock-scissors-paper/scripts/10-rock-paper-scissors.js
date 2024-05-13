@@ -6,7 +6,7 @@ const score = JSON.parse(localStorage.getItem('score')) || {
     ties:0
   };
 
-  updateScoreElements();
+updateScoreElements();
 /*    if (!score){
     score={
       wins:0,
@@ -19,16 +19,16 @@ const score = JSON.parse(localStorage.getItem('score')) || {
       const computerMove = pickcomputerMove();
 
       let result ='';
-      if (playerMove ==='Scissosrs'){
+      if (playerMove ==='Scissors'){
         if(computerMove==='Rock'){
           result = 'You loose';
-        }else if(computerMove==='Paper'){
+        }else if(computerMove ==='Paper'){
           result = 'You win';
         }else if(computerMove==='Scissors'){
           result = 'Tie';
         }
 
-      }else if(playerMove==='Paper'){
+      }else if(playerMove ==='Paper'){
         if(computerMove==='Rock'){
           result = 'You win';
         }else if(computerMove==='Paper'){
@@ -72,7 +72,7 @@ const score = JSON.parse(localStorage.getItem('score')) || {
 
     function updateScoreElements(){
       document.querySelector('.js-score')
-       .innerHTML=` Wins: ${score.wins}, Losses: ${score.losses}, Ties ${score.ties}`
+       .innerHTML=` Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`
  
     }
     
@@ -81,7 +81,7 @@ const score = JSON.parse(localStorage.getItem('score')) || {
       let computerMove = '';
       if(randomNumber >=0 && randomNumber < 1/3){
         computerMove = 'Rock';
-      }else if(randomNumber > 1/3 && randomNumber <2/3){
+      }else if(randomNumber >= 1/3 && randomNumber <2/3){
         computerMove ='Paper';
       }
       else if (randomNumber >=2/3 && randomNumber < 1){
