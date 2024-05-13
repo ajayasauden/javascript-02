@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coin-flip</title>
+</head>
+<body>
+    <button onclick="
+    playGame('heads')
+    ">heads</button>
+    
+    <button onclick="
+    playGame('tails')
+    ">tails</button>
+
+    <button onclick="
+     score.wins=0,
+     score.losses=0
+     //localStorage.setItem('score',JSON.stringify(score));
+     localStorage.removeItem('score')
+     updateScore()
+    ">Reset</button>
+
+    <p class="js-wins-losses">wins: 0, losses: 0</p>
+    <p class="js-display"></p>
+    
+    <script>
+        
+        const score=JSON.parse(localStorage.getItem('score')) || {
+          wins:0,
+          losses:0
+        }
+        updateScore()
+
+        
+
+        function playGame(playerMove){
+            const computer=computerGuess();
+            let result=''
+            if (computer === playerMove){
+              result ='You win';
+            }
+            else{
+              result ='You loose';
+            }   
+            if (result==='You win'){
+                score.wins +=1;
+            }else if(result==='You loose'){
+              score.losses +=1;
+            }
+
+            localStorage.setItem('score',JSON.stringify(score))
+            document.querySelector('.js-display')
+              .innerHTML=`You choose ${playerMove}. The coin flips ${computerMove}.${result}`
+            updateScore()
+        }
+        
+        function computerGuess(){
+            const guess=Math.random();
+            if(guess> 0.5){
+              computerMove='heads'
+            }else{
+              computerMove='tails'
+            }
+            return computerMove;
+        }
+
+        function updateScore(){
+          document.querySelector('.js-wins-losses')
+          .innerHTML=`wins: ${score.wins}, losses: ${score.losses}`
+        }
+        
+    </script>
+    
+</body>
+</html>
+<!-- 
+ 5:51 
+ 3:49  
+ -->

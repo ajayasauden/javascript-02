@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <p>
+       <button onclick="updateCalaution('1')">1</button>
+       <button onclick="updateCalaution('2')">2</button>
+       <button onclick="updateCalaution('3')">3</button>
+       <button onclick="updateCalaution(' + ')">+</button>
+    </p>
+    <p>
+        <button onclick="updateCalaution('4')">4</button>
+        <button onclick="updateCalaution('5')">5</button>
+        <button onclick="updateCalaution('6')">6</button>
+        <button onclick="updateCalaution(' - ')">-</button>
+    </p>
+    <p>
+        <button onclick="updateCalaution('7')">7</button>
+        <button onclick="updateCalaution('8')">8</button>
+        <button onclick="updateCalaution('9')">9</button>
+        <button onclick="updateCalaution(' * ')">*</button>
+    </p>
+    <p>
+        <button onclick="updateCalaution('0')">0</button>
+        <button onclick="updateCalaution('.')">.</button>
+        <button onclick="updateCalaution(' / ')">/</button>
+        <button onclick="calculation= eval(calculation)
+        console.log(calculation)">=</button>
+    </p>
+    
+
+    <script>
+        let calculation= '';
+        function updateCalaution(data){
+            calculation += data
+            console.log(calculation)
+        }
+    </script>
+</body>
+</html>
+<!--
+5:51
+4:34
+2:42 
+  -->

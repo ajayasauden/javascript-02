@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body>
+    <input class="js-input-name" placeholder="Name">
+    
+    <button onclick="
+    const inputElement = document.querySelector('.js-input-name');
+    document.querySelector('.js-display')
+     .innerHTML=`Your name is ${inputElement.value}`
+     "class="js-submit">Submit</button>
+
+    <p class="js-display"></p>
+
+    
+</body>
+</html>
