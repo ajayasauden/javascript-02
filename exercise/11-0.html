@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        const name=["ram","search","hari"]
+        for(let i=0;i<name.length;i++){
+            if(name[i] === "search"){
+                console.log(i)
+                break;
+            }
+            else{
+                console.log(-1)
+            }
+        }
+
+        */
+        /*
+        function findIndex(array,word){
+            for(let i=0;i<array.length;i++){
+                if(array[i] === word){
+                    return i;
+                } 
+            }
+            return -1;
+        }
+
+        console.log(findIndex(["hello","Apple","Monkey","world"],"mango"))
+
+        function removeEgg(foods){
+            result=[]
+            for(let i=0;i<foods.length;i++){
+                if(foods[i] === "egg"){
+                    //foods.splice(i,1);
+                    //i--
+                    continue;
+                }  
+                result.push(foods[i])
+            }
+            return result;
+        }
+        console.log(removeEgg(["egg","mango"]))
+        */
+        function removeEgg(foods){
+            count=0;
+            for(let i=0;i<foods.length;i++){
+                if(foods[i] === "egg"){
+                    count ++                    
+                    if(count <= 2){
+                        foods.splice(i,1)
+                        i--;
+                    }
+                }
+            }
+            return foods;
+        }
+        console.log(removeEgg(["egg","egg","water","egg","mango","egg","Aplle"]))
+    </script>
+</body>
+</html>

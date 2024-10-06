@@ -7,7 +7,8 @@
 </head>
 <body>
     <script>
-       /*const myArray = [
+        /*
+        const myArray = [
         10,
         20,
         30];
@@ -37,7 +38,8 @@
         for(let i=0; i<=todolist.length-1; i++){
             const value = todolist[i] 
             console.log(value)
-        }*/
+        }
+        
         const nums = [1,1,3,4]
         var total=0
         for(let i=0; i<nums.length;i++){
@@ -51,7 +53,48 @@
             const num=nums[i]
             numDoubled.push(num*2)
         }
-        console.log(numDoubled)
+        console.log(numDoubled) 
+    */
+    const array1=[1,2,3,4];
+    const array2=array1.slice();
+    array2.push(9);
+    console.log(array1);
+    console.log(array2);
+   
+
+    const [firstvValue,secondValue]=[1,2,3,4]
+
+    for(let i=0;i<=10;i++){
+        if(i%3 === 0){
+            continue;//scip 1 iterationb
+        }
+        console.log(i)
+        if(i=== 8){
+        break;}
+    }
+    let i=1;
+    while(i<=10){
+        if(i%3===0){
+            i++;
+            continue;
+        console.log(i)}
+        i++;
+    }
+    function doubleArray(nums){
+        const numDoubled=[]
+
+        for(let i=0; i< nums.length; i++){
+            const num=nums[i]
+            if(num === 0){
+                return numDoubled;
+            }
+            numDoubled.push(num*2)
+        }
+        return numDoubled;
+             
+    }
+    console.log(doubleArray([1,1,2]))
+    console.log(doubleArray([2,0,4,5]))
     </script>
 </body>
-</html>
+</html>10:15
