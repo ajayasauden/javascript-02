@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrray and looops</title>
+</head>
+<body>
+    <script>
+        const num=[10,20,30];
+        num[2]=99
+        console.log(num)
+
+        const num1=['ram','hari','sita'];
+        function getLastValue(num1){
+          return num1[num1.length-1];
+        }
+        console.log(getLastValue(num1))
+        
+        let numbers=[2,3,4,5]
+        console.log(numbers)
+        function arrayswap(numbers){
+           return numbers.reverse();
+        }
+        console.log(arrayswap(numbers))
+
+        number=[1,2,3,4,5,6]
+        function addOne(number){
+            for(let i=0;i< number.length;i++)
+            {
+              number[i] =number[i]+1;
+            }
+            return number;
+        }
+        console.log(addOne(number));
+
+        function twoarray(number){
+            return number.map(x=>x+2);
+        }
+        console.log(twoarray(number))
+
+        myarray=["ram",'sita','arjun']
+        for(i=0;i<Math.floor(myarray.length/2);i++){
+            [myarray[i], myarray[myarray.length-1-i]]=[myarray[myarray.length-1-i],myarray[i]]
+        }
+        console.log(myarray)
+
+        function toUpperCaseName(name){
+            return name.map(nam=>nam.toUpperCase())
+        }
+        const name=["john","emily","michel"]
+        console.log(toUpperCaseName(name))
+
+        function addNum(array,numb){
+            return array.map(arr => {
+                return arr+numb;
+            });
+        }
+        const array=[1,2,3,4]
+        const numb=2
+        console.log(addNum(array,numb))
+
+        function countPositive(numbers){
+            const filterednumbers=numbers.filter(number =>{
+                return number > 0;
+                 
+            });
+            return filterednumbers.length
+        }
+        console.log(countPositive(numbers))
+    </script>
+</body>
+</html>
+// write a code to swap values of array

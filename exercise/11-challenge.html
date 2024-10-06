@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function minMax(nums){
+            const min =Math.min(...nums)
+            console.log(min)
+            const max=Math.max(...nums)
+            console.log(max)
+            return{min,max}
+        }
+        let nums=[]
+        console.log(minMax(nums))
+
+        function maxMin(nums){
+            if(nums.length==0){
+                return {max:null,min:null}
+            }
+           for(let i=0;i<nums.length;i++){
+            for(let j=0;j<nums.length-1;j++){
+                if (nums[j]<nums[j+1]){
+                    const temp=nums[j]
+                    nums[j]=nums[j+1]
+                    nums[j+1]=temp
+                }
+            }
+           }
+           
+           const max= nums[0];
+           const min= nums[nums.length-1]
+           return {max,min}
+
+        }
+        console.log(maxMin(nums))
+
+        function countWords(word){
+           
+        }
+
+
+
+    </script>
+</body>
+</html>
