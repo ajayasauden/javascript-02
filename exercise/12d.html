@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="press()" class="js-buttom">Start</button>
+    <script>
+      function press(){
+        setTimeout(function(){
+          document.querySelector(".js-buttom").innerHTML='Finished!'
+        },1000)
+        document.querySelector(".js-buttom").innerHTML='Loading...'
+      }
+    </script>
+</body>
+</html>

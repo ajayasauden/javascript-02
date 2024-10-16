@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="press()" class="js-buttom">Add to cart</button>
+    <div class="js-message"></div>
+    <script>
+
+      let timeId;
+      function press(){
+        document.querySelector(".js-message").innerHTML="Added"
+        clearTimeout(timeId);
+        
+        timeId = setTimeout(function(){
+          document.querySelector(".js-message").innerHTML=""
+          },2000)
+      }
+    </script>
+</body>
+</html>
